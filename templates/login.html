@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <form action="/login" method="post">
+      <br><input type="text" name="username" placeholder="Username" value"{{username}}
+      <br><input type="password" name="pass1" placeholder="Your Password Please" required>
+      <br><input type="submit" value="Login">
+    </form>
+    <div> New Peep to the site? Come with me <a href="/signup">Click This Please</a></div>
+{% endblock %}

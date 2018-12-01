@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>
+  What's today's topic?
+</h1>
+<form action="/add" method="post">
+  <input type='text' name="Title" placeholder="Title" />
+  <input type='text' name="Body" placeholder="Body" />
+  <input type= 'submit' />
+
+
+</form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+          <h1>Blog Posts</h1>
+          <hr>
+          {% if blogs|length == 0 %}
+          <p>No Blogs Yet...keyword YET</p>
+          {% else %}
+          {% for item in blogs %}
+            <a href="./display?id={{item.id}}">{{item.title}}</a>
+            <br>&emsp;"{{item.body[0:15]}}"<br>
+            &emsp;&emsp;Written by: <a href="./profile?user={{item.user}}" style="text-transform:uppercase">{{item.user}}</a><br>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <hr>
+{% endblock %}
